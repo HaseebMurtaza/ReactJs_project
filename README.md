@@ -53,6 +53,14 @@ export const Component;
 import { Component } from "path";
 
 # React Hooks
+
 (Normal JS utility functions )
+
 - useState() - Superpoerful state variables in react
 - useEffect()
+
+# Two types of routing in web apps
+
+- Client side routing - we are not making any network call because all components are already loaded (only components are being interchanged - single page application)
+
+- Server side routing - you make a network call and the page is coming from the server side routing (page is being reloaded)

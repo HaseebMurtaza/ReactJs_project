@@ -8,8 +8,6 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  console.log("Body Rendered");
-
   useEffect(() => {
     fecthData();
   }, []);
@@ -20,10 +18,6 @@ const Body = () => {
     );
 
     const json = await data.json();
-
-    console.log(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
 
     setlistOfRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants //optional chaining
@@ -50,8 +44,6 @@ const Body = () => {
           />
           <button
             onClick={() => {
-              console.log(searchText);
-
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
@@ -68,7 +60,7 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4
             );
-            setlistOfRestaurant(filteredList);
+            setfilteredRestaurants(filteredList);
           }}
         >
           Top Rated Restaurant
