@@ -15,10 +15,12 @@ class About extends Component {
   render() {
     //console.log("Parent render ");
     return (
-      <div className="About">
-        <h1>About</h1>
-        <h2>Welcome👋 to our food App </h2>
+      <div className="m-4 p-4">
+        <h1 className="font-bold text-2xl">About Us</h1>
+        <h2 className="font-bold text-lg py-4">Welcome👋 to our food App </h2>
+        <div className="bg-slate-200 p-4 text-base">
         <UserClass name={"First (Class Component)"} location={"Multan"} />
+        </div>
       </div>
     );
   }
