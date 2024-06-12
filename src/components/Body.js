@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLable } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { RESTAURANT_API } from "../utils/constants";
@@ -10,6 +10,9 @@ const Body = () => {
   const [filteredRestaurants, setfilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+  const RestaurantCardPromoted = withPromotedLable(RestaurantCard);
+
+  console.log("Body Renderd", listOfRestaurants);
 
   useEffect(() => {
     fecthData();
@@ -21,10 +24,10 @@ const Body = () => {
     const json = await data.json();
 
     setlistOfRestaurant(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants 
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setfilteredRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants 
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -86,7 +89,11 @@ const Body = () => {
             key={restaurant.info.id}
             style={{ textDecorationColor: "white" }}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.isOpen ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
