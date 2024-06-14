@@ -36,7 +36,10 @@ const RestaurantMenu = () => {
       </p>
       {/* Categories accordians*/}
       {categories.map((category) => (
-        <RestaurantCategory data={category?.card?.card} />
+        <RestaurantCategory
+          data={category?.card?.card}
+          key={category?.card?.card.title}
+        />
       ))}
 
       {/* <h2 className=" px-2 py-2 font-bold text-lg">Menu</h2>
