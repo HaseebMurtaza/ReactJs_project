@@ -8,6 +8,7 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
     resData?.info;
+  console.log(resData?.info);
   return (
     <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-slate-200 ">
       <img

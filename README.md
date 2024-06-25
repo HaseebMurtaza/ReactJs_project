@@ -64,3 +64,12 @@ import { Component } from "path";
 - Client side routing - we are not making any network call because all components are already loaded (only components are being interchanged - single page application)
 
 - Server side routing - you make a network call and the page is coming from the server side routing (page is being reloaded)
+
+# Redux Toolkit
+
+- Install @reduxjs/toolkit & react-redux
+- Build our store
+- Connect our store to our app
+- Slice (cartSlice)
+- dispatch(action)
+- Selector
