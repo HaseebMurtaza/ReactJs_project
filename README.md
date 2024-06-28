@@ -1,6 +1,6 @@
 # Hello React
 
-# Parcel is a bundler which gives us these amazing things for us
+# Parcel is a bundler which gives us these amazing things to us
 
 - Dev Build
 - Local Server
@@ -20,7 +20,7 @@
 - Tree Shaking - remove unsued code
 - Different dev and prod bundles
 
-# Hello Food
+# Hello Food (Our Food App)
 
 /\*\*
 
@@ -56,7 +56,7 @@ import { Component } from "path";
 
 (Normal JS utility functions )
 
-- useState() - Superpoerful state variables in react
+- useState() - Superpowerful state variables in react
 - useEffect()
 
 # Two types of routing in web apps
